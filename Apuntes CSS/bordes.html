@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a class="active" href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Bordes</h2>
+            <p> 
+                Los bordes de un elemento de HTML se definen con tres atributos básicos: estilo, 
+                anchura y color.
+            </p>
+            <ol style="list-style-type: disc">
+                <li>
+                    <span>border-style:</span> se refiere a la forma del borde y puede tomar estos 
+                    valores: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset.
+                    <p>Ejemplo:</p>
+                    <pre>
+
+            p {
+                border-style: dotted;
+            }
+
+                    </pre>
+                    <p>Se mostraría:</p>
+                    <p style="border-style: dotted;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima esse dolor odio 
+                        eveniet nesciunt. Voluptatibus, reiciendis sit. Error, recusandae, repellendus 
+                        nam vero numquam in minima hic quos unde, dicta ullam.
+                    </p>
+                </li>
+                <li>
+                    <span>border-width:</span> El ancho del borde puede tomar valores numéricos 
+                    absolutos y relativos (px, mm, em,...) y los valores predeterminados: thin, medium, thick.
+                    <p>Ejemplo:</p>
+                    <pre>
+
+            p {
+                border-width: medium;
+            }
+
+                    </pre>
+                    <p>Se mostraría:</p>
+                    <p style="border-width: medium; border-style: solid;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima esse dolor odio 
+                        eveniet nesciunt. Voluptatibus, reiciendis sit. Error, recusandae, repellendus 
+                        nam vero numquam in minima hic quos unde, dicta ullam.
+                    </p>
+                </li>
+                <li>
+                    <span>border-radius:</span> define el radio de círculo de las cuatro esquinas.
+                    <p>Ejemplo:</p>
+                    <pre>
+
+            p {
+                border-radius: 10px;
+            }
+
+                    </pre>
+                    <p>Se mostraría:</p>
+                    <p style="border-radius: 10px; border-style: solid;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima esse dolor odio 
+                        eveniet nesciunt. Voluptatibus, reiciendis sit. Error, recusandae, repellendus 
+                        nam vero numquam in minima hic quos unde, dicta ullam.
+                    </p>
+                </li>
+                <li>
+                    <span>border-color:</span> Con esta propiedad las esquinas de los bordes se pueden 
+                    hacer redondeadas. El valor está compuesto por dos valores el radio horizontal y el 
+                    radio vertical. Si sólo se da un valor la esquina tendrá forma redondeada, y si se 
+                    dan dos valores forma de elipse.
+                    <p>Ejemplo:</p>
+                    <pre>
+
+            p {
+                border-color: darkviolet;
+            }
+
+                    </pre>
+                    <p>Se mostraría:</p>
+                    <p style="border-color:darkviolet; border-style: solid;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima esse dolor odio 
+                        eveniet nesciunt. Voluptatibus, reiciendis sit. Error, recusandae, repellendus 
+                        nam vero numquam in minima hic quos unde, dicta ullam.
+                    </p>
+                </li>
+            </ol>
+            <br>
+          </div>
+    </body>
+</html>

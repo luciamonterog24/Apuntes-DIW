@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a class="active" href="video.html">Vídeo y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+    <body>
+        <div class="contenido">
+            <h2 class="cabecera">Vídeo</h2>
+            <p>
+                La etiqueta vídeo incrusta un vídeo en una página web, dentro de la etiqueta se debe 
+                especificar la fuente del vídeo mediante la etiqueta source, por ejemplo:
+            </p>
+            <p>
+                <pre>
+
+                        &lt;video  controls&gt;
+                            &lt;source src="multimedia/video.mp4" type="video/mp4"&gt;
+                                Formato de vídeo no soportado.
+                        &lt;/video&gt;
+
+                </pre>
+            </p>
+            <p>
+                El atributo <span>controls</span> hace que aparezca una barra con los 
+                controles para arrancar/parar la reproducción, control del volumen, etc.
+            </p>
+            <p>
+                Antes del cierre de la etiqueta <span>&lt;/video&gt;</span> se puede escribir un texto 
+                que aparecerá si el navegador no es capaz de reproducir el formato de 
+                vídeo. Aunque algunos navegadores no lo muestran y muestran un mensaje 
+                propio como "Origen no válido".
+            </p>
+            <h3>Atributos</h3>
+            <ol style="list-style-type: circle"> 
+                <li><span>autoplay</span>. Si aparece este atributo el vídeo comenzará a reproducirse automáticamente 
+                    al cargarse la página, si no aparece el usuario tendrá que pulsar en el botón Play.</li>
+                <li><span>loop</span>. Si aparece este atributo cuando el vídeo llegue al final volverá a reproducirse desde 
+                    el principio, y así indefinidamente.</li>
+                <li><span>muted</span>. Si aparece este atributo no se oirá el sonido. Si utilizamos este atributo es conveniente 
+                    incluir el atributo controls para que el usuario pueda activar el sonido.</li>
+                <li><span>poster</span>. Este atributo permite colocar una imagen como portada del vídeo</li>
+                <li><span>width y height</span>. Indican la anchura y altura del vídeo en pixels.</li>
+                <li><span>preload</span>. Indica cómo se debe cargar el vídeo, tiene estos tres valores: <span>auto, none y metadata</span></li>
+                <li><span>type</span>. Este atributo dentro de la etiqueta source indica el tipo de vídeo. Los tipos mp4, ogg, webm, son los 
+                    tipos reconocidos oficialmente por html 5.</li>
+            </ol>
+            <h2 class="cabecera">Audio</h2>
+            <p>
+                Para reproducir sonido disponemos de la etiqueta <span>audio</span>. En su versión mínima sólo necesita una fuente de sonido y un 
+                control de reproducción.
+            </p>
+            <p>
+                <pre>
+
+                        &lt;audio controls src="multimedia/audio_prueba.mp3" &gt;
+                            Audio no soportado
+                            &lt;/audio&gt;
+
+                </pre>
+            </p>
+            <p>
+                Esta etiqueta audio es muy similar a la que acabamos de ver para vídeo, si no estamos seguros de que el navegador 
+                vaya a poder reproducir el formato de vídeo podemos incluir etiquetas source con otros formatos, también podemos 
+                incluir el atributo type con el tipo de formato de audio.También disponemos de los atributos <span>autoplay, controls, 
+                mute, loop y preload</span>.
+            </p>
+            <p>
+                El tipo de vídeo mpeg (.mp3) es claramente el más utilizado en la web y es reproducido por todos los navegadores, 
+                otros tipos estándar de HTML 5 son ogg y wav.
+            </p>
+            <p>
+                Existen otros tipos de audio como el .m4a que utiliza la grabadora de voz de Windows.
+            </p>
+            <br>
+        </div>
+    </body>
+</html>

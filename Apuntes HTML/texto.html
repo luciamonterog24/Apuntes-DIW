@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a class="active" href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Texto</h2>
+            <h3>Escribiendo en el cuerpo de la página</h3>
+            <p>
+                Como estamos diciendo todo el texto de la página estará dentro 
+                del <span>&lt;body&gt;</span>, que debe estar, principalmente, dentro de 
+                párrafos. En HTML, los párrafos se identifican con la etiqueta <span>&lt;p&gt;&lt;/p&gt;</span>. 
+                Dentro de los párrafos colocaremos texto e imágenes, y algunas etiquetas que nos permitan dar 
+                formato al texto. Dentro de un párrafo no debe haber otros párrafos anidados.
+            </p>
+            <p>
+                A su vez, dentro del <span>&lt;body&gt;</span>, disponemos de encabezados que nos permiten 
+                organizar los títulos o rótulos del texto. Los encabezados van desde el <span>h1</span> de 
+                mayor tamaño, al <span>h6</span>, el más pequeño. Por ejemplo, utilizaríamos un <span>h1</span> 
+                para poner el rótulo principal de la página, <span>h2</span> para los títulos de los apartados, 
+                <span>h3</span> para los apartados de segundo nivel, etc. El propio texto de cada apartado iría 
+                fuera del encabezado contenido en párrafos <span>&lt;p&gt;&lt;/p&gt;</span> u otras etiquetas.
+            </p>
+            <p>
+                El navegador también ignora los saltos de línea. Así si dentro de un párrafo colocamos varios 
+                saltos de línea pulsando Intro, estos no se verán. Para crear un salto de línea dentro de un 
+                párrafo, utilizamos la etiqueta <span>&lt;br&gt;</span>.
+            </p>
+            <p>
+                Cada etiqueta <span>&lt;p&gt;&lt;/p&gt;</span> lleva implicito un salto de línea.
+            </p>
+            <p>
+                Otras formas de agrupar el contenido dentro de la página web es con las etiquetas <span>&lt;div&gt;</span> 
+                y <span>&lt;span&gt;</span>. La etiqueta <span>&lt;div&gt;</span> se utiliza a nivel de bloque y la etiqueta 
+                <span>&lt;span&gt;</span> a nivel de línea o palabras. Estas etiquetas son básicamente contenedores genéricos 
+                de contenido. El contenido se escribe entre las etiquetas de apertura y de cierre <span>&lt;div&gt;</span> 
+                contenido <span>&lt;div/&gt;</span>, el criterio para agrupar contenido no está definido estrictamente, por 
+                lo tanto podemos utilizarlas para lo que queramos, por ejemplo para dar estilo al contenido.
+            </p>
+            <p>
+                Podríamos decir que las etiquetas <span>&lt;div&gt;</span> y <span>&lt;span&gt;</span> son unas etiquetas 
+                neutras dentro de la semántica de HTML. Por el contrario, en HTML 5 han surgido nuevas etiquetas semánticas 
+                para agrupar el contenido según su significado. Estas nuevas etiquetas a nivel de bloque son, section para 
+                secciones, article para artículos, header para cabeceras, nav para menús, footer para pies de página y aside 
+                para contenido en el lateral. A nivel de línea o texto tenemos muchas etiquetas semánticas como strong, em, cite. 
+                A lo largo del curso iremos viéndolas con detalle.
+            </p>
+            <p>
+                El uso de estas nuevas etiquetas semánticas no es obligatorio, pero sí recomendable, sobre todo para tener la 
+                información mejor estructurada y también para que los buscadores sean capaces de identificar mejor el contenido 
+                de nuestra página. Resumiendo, lo recomendable es utilizar las etiquetas semánticas y en los casos en los que no 
+                exista una etiqueta semántica apropiada utilizar etiquetas <span>&lt;div&gt;</span> y <span>&lt;span&gt;</span>
+            </p>
+            <p>
+                Otras etiquetas para agrupar y organizar el contenido (texto, imágenes, ...) en formatos estructurados son las 
+                listas (ul, ol, li) y las tablas (table, tr, td)
+            </p>
+            <br>
+          </div>
+    </body>
+</html>

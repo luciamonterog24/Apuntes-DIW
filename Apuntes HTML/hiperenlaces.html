@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a class="active" href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Hiperenlaces</h2>
+            <p>Un hiperenlace se escribe con la etiqueta <span>&lt;a&gt;</span> y permite ir 
+            (navegar) a un recurso de internet designado por su dirección de internet (URL). 
+            El recurso más usual es una página web pero también puede ser un archivo de imagen, 
+            vídeo, dirección email, dirección ftp, punto de ancla, ...</p>
+
+            <p>Un hiperenlace tiene dos partes fundamentales, el destino y el elemento que activa 
+            el enlace. Vamos a explicarlo sobre el siguiente ejemplo.</p>
+                
+            <p>La forma más usual de utilizar la etiqueta <span>&lt;a&gt;</span> es para enlazar 
+            con otra página web mediante un texto:<p>
+            <br>
+            <a href="http://www.Google.es">Google</a>
+            <br><br>
+            <p>El código correspondiente es este:</p>
+            <pre>
+
+                &lt;a href="http://www.google.es">Google&lt;/a&gt;
+
+            </pre>
+            <p>
+                El <span>elemento que activa el enlace</span> es el texto <strong>Google</strong> que al ser pulsado nos 
+                lleva al <span>destino</span> del hiperenlace. El destino se indica con el atributo href que en 
+                este caso es una dirección de internet (URL). Al colocar el cursor en el texto del 
+                hiperenlace el cursor toma la forma de una mano para indicarnos que se trata de un 
+                hiperenlace. Si hacemos clic con el botón derecho aparecerá un menú contextual con 
+                varias opciones (Abrir en una pestaña nueva, Guardar enlace, ...). En los dispositivos 
+                táctiles, al no existir cursor, el comportamiento es diferente. No hay forma de saber 
+                si un texto contiene un enlace hasta que demos una pulsación corta, con lo cual se 
+                activará; o demos una pulsación larga para que aparezca el menú contextual.
+            </p>
+            <div>
+                También es frecuente que el elemento que activa el enlace sea una imagen (o un gif en este caso), 
+                como en el siguiente ejemplo:
+                <br><br>
+                <a href="http://www.google.es"><img style="width: 20%;" src="imagenes/giphy.gif"/></a>
+            </div>
+            <div>
+                <p>El código correspondiente es:</p>
+                <pre>
+
+                    &lt;a href="http://www.google.es"&gt;&lt;img src="imagenes/giphy.gif"/&gt;&lt;/a&gt;
+                    
+                </pre>
+            </div>
+            <br>
+          </div>
+    </body>
+</html>

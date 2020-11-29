@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a class="active" href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Listas</h2>
+            <h3>list-style-type</h3>
+            <p>
+                Por defecto, los navegadores muestran los elementos de 
+                las listas no ordenadas con una viñeta formada por un 
+                pequeño círculo de color negro.
+            </p>
+            <p>
+                No obstante, CSS define varias propiedades para controlar 
+                el tipo de viñeta que muestran las listas, además de poder 
+                controlar la posición de la propia viñeta. La propiedad 
+                básica es la que controla el tipo de viñeta que se muestra 
+                y que se denomina <span>list-style-type</span>.
+            </p>
+            <ol style="list-style-type: disc;">
+                <li>
+                    Los valores gráficos son <span>disc, circle y square</span> muestran como viñeta 
+                    un círculo relleno, un círculo vacío y un cuadrado relleno respectivamente.
+                </li>
+                <li>
+                    Los valores numéricos están formados por <span>decimal, decimal-leading-zero, 
+                        lower-roman, upper-roman, armenian y georgian</span>.
+                </li>
+                <li>
+                    Por último, los valores alfanuméricos se controlan mediante <span>lower-latin, 
+                        lower-alpha, upper-latin, upper-alpha y lower-greek</span>.
+                </li>
+            </ol>
+            <p>Ejemplo:</p>
+            <pre>
+
+                .lista{
+                    list-style-type: lower-alpha;
+                }
+
+            </pre>
+            <p>Se mostraría:</p>
+            <ol style="list-style-type: lower-alpha;">
+                <li>Elemento1</li>
+                <li>Elemento2</li>
+                <li>Elemento3</li>
+            </ol>
+            <h3>list-style-position</h3>
+            <p>
+                La propiedad list-style-position permite controlar la colocación de las viñetas.
+            </p>
+            <ol>
+                <li><span>list-style-position:inside</span></li>
+                <li><span>list-style-position:outside</span></li>
+            </ol>
+            <h3>list-style-image</h3>
+            <p>
+                Cuando se requiere personalizar el aspecto de las viñetas, se debe emplear 
+                la propiedad list-style-image, que permite mostrar una imagen propia en 
+                vez de una viñeta automática.
+            </p>
+            <p>
+                Las imágenes personalizadas se indican mediante la URL de la imagen. 
+                Si no se encuentra la imagen o no se puede cargar, se muestra la viñeta 
+                automática correspondiente (salvo que explícitamente se haya eliminado 
+                mediante la propiedad list-style-type).
+            </p>
+            <br>
+        </div>
+    </body>
+</html>

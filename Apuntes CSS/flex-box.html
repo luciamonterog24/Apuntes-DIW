@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a class="active" href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">FlexBox</h2>
+            <p>
+                Cuando describimos a flexbox como unidimensional destacamos 
+                el hecho que flexbox maneja el layout en una sola dimensión 
+                a la vez, ya sea como fila o como columna.
+            </p>
+            <p>
+                La propiedad <span>display</span> permite definir el tipo de contenedor flexible.
+            </p>
+            <h3>Los dos ejes de FlexBox</h3>
+            <p>
+                Cuando trabajamos con flexbox necesitamos pensar en términos 
+                de dos ejes — el <span>eje primario(eje x)</span> y el <span>eje secundario (eje y)</span>. El eje 
+                primario está definido por la propiedad <span>flex-direction</span>, y 
+                eje secundario es perpendicular a este. Todo lo que hacemos con 
+                flexbox está referido a estos dos ejes, por lo que vale la pena 
+                entender cómo trabajan desde el principio.
+            </p>
+            <img src="imagenes/eje-2d-vacio.png">
+            <h3>justify-content</h3>(Eje primario)
+            <p>
+                Alinea elementos horizontalmente y acepta los siguientes valores:
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>flex-start: Alinea elementos al lado izquierdo del contenedor.</li>
+                <li>flex-end: Alinea elementos al lado derecho del contenedor.</li>
+                <li>center: Alinea elementos en el centro del contenedor.</li>
+                <li>space-between: Muestra elementos con la misma distancia entre ellos.</li>
+                <li>space-around: Muestra elementos con la misma separación alrededor de ellos.</li>
+            </ol>
+            <h3>align-items</h3>(Eje secundario)
+            <p>
+                Esta propiedad CSS alinea elementos verticalmente y acepta los siguientes valores:
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>flex-start: Alinea elementos a la parte superior del contenedor.</li>
+                <li>flex-end: Alinea elementos a la parte inferior del contenedor.</li>
+                <li>center: Alinea elementos en el centro (verticalmente hablando) del contenedor.</li>
+                <li>baseline: Muestra elementos en la línea base del contenedor.</li>
+                <li>stretch: Elementos se estiran para ajustarse al contenedor.</li>
+            </ol>
+            <h3>flex-direction</h3>
+            <p>
+                Esta propiedad CSS define la dirección de los elementos en el contenedor, y acepta los siguientes valores:
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>row: Los elementos son colocados en la misma dirección del texto.</li>
+                <li>row-reverse: Los elementos son colocados en la dirección opuesta al texto.</li>
+                <li>column: Los elememtos se colocan de arriba hacia abajo.</li>
+                <li>column-reverse: Los elementos se colocan de abajo hacia arriba.</li>
+            </ol>
+            <h3>order</h3>
+            <p>
+                Por defecto, los elementos tienen un valor 0, pero nosotros podemos usar esta propiedad para establecerlo 
+                a un número entero positivo o negativo.
+            </p>
+            <p>
+                Ejemplo:  order:-3;
+            </p>
+            <h3>align-self</h3>(Eje secundario)
+            <p>
+                Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico (Contenido).
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>flex-start: Alinea elementos a la parte superior del contenedor.</li>
+                <li>flex-end: Alinea elementos a la parte inferior del contenedor.</li>
+                <li>center: Alinea elementos en el centro (verticalmente hablando) del contenedor.</li>
+                <li>baseline: Muestra elementos en la línea base del contenedor.</li>
+                <li>stretch: Elementos se estiran para ajustarse al contenedor.</li>
+            </ol>
+            <h3>flex-wrap</h3>
+            <ol style="list-style-type: circle;">
+                <li>nowrap: Cada elemento se ajusta en una sola línea.</li>
+                <li>wrap: Los elementos se envuelven alrededor de líneas adicionales.</li>
+                <li>wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.</li>
+            </ol>
+            <h3>flex-flow</h3>
+            <p>
+                Esta propiedad, acepta un valor de <span>flex-direction</span> y <span>flex-wrap</span> separado por un espacio.
+            </p>
+            <p>
+                Ejemplo: flex-flow: wrap column-reverse;
+            </p>
+            <h3>align-content</h3>
+            <p>
+                Se usa para establecer como múltiples líneas están separadas una de otra. Esta propiedad acepta 
+                los siguientes valores:
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>flex-start: Las líneas se posicionan en la parte superior del contenedor.</li>
+                <li>flex-end: Las líneas se posicionan en la parte inferior del contenedor.</li>
+                <li>center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.</li>
+                <li>space-between: Las líneas se muestran con la misma distacia entre ellas.</li>
+                <li>space-around: Las líneas se muestran con la misma separación alrededor de ellas.</li>
+                <li>stretch: Las líneas se estiran para ajustarse en el contenedor.</li>
+            </ol>
+            <h3>vertical-align</h3>
+            <p>
+                La propiedad vertical-align de CSS especifica el alineado vertical de un elemento en 
+                línea o una celda de una tabla.
+            </p>
+            <ol style="list-style-type: circle;">
+                <li>baseline: Alinea la línea base del elemento con la línea base del padre. </li>
+                <li>top: Alinea la parte superior del elemento con el elemento más alto en la línea.</li>
+                <li>middle: Las líneas se estiran para ajustarse en el contenedor.</li>
+            </ol>
+            <br>
+            <p><span><a href="https://flexboxfroggy.com/#es">Juego FlexBox Froggy</a></span></p>
+          <br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a class="active" href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+    <body>
+        <div class="contenido">
+            <h2 class="cabecera">Tablas</h2>
+            <p>
+                Las tablas nos permiten organizar la información en <span>filas</span> y <span>columnas</span>. Cada fila se divide en 
+                celdas. La información se introduce en las celdas. Una columna está formada por las celdas 
+                agrupadas verticalmente, en HTML no existe una etiqueta para definir columnas. Las tablas se 
+                definen en base a las filas y a las celdas, como veremos a continuación.
+            </p>
+            <img style="width: 20%;" src="imagenes/tablas.gif"/>
+            <h3>Etiquetas de tabla &lt;table&gt; &lt;tr&gt; y &lt;td&gt;&lt;/td&gt;</h3>
+            <p>
+                La etiqueta <span>&lt;table&gt;</span> y su correspondiente etiqueta de cierre 
+                <span>&lt;/table&gt;</span> definen la tabla. Entre ambas etiquetas se escriben 
+                las etiquetas de fila <span>&lt;tr&gt;</span> y <span>&lt;/tr&gt;</span> y dentro 
+                de las filas las etiquetas de celda <span>&lt;td&gt;</span> y <span>&lt;/td&gt;</span>, 
+                entre estas se escribe el contenido de la celda que puede ser cualquier etiqueta de HTML 
+                o directamente un texto. Por lo tanto la tabla más sencilla con una sola celda sería esta:
+            </p>
+            <pre>
+
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Celda 1.1&lt;/tr&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+
+            </pre>
+            <br>
+            <p>
+                Ejemplo:
+            </p>
+            <pre>
+
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Marcas&lt;/td&gt;
+                        &lt;td&gt;Seat&lt;/td&gt;
+                        &lt;td&gt;Ford&lt;/td&gt;
+                        &lt;td&gt;BMW&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;2016&lt;/td&gt;
+                        &lt;td&gt;23900&lt;/td&gt;
+                        &lt;td&gt;21500&lt;/td&gt;
+                        &lt;td&gt;11500&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;2017&lt;/td&gt;
+                        &lt;td&gt;24600&lt;/td&gt;
+                        &lt;td&gt;23500&lt;/td&gt;
+                        &lt;td&gt;13400&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                
+            </pre>
+            <br><br>
+            <p>
+                Mostraría el siguiente resultado:
+            </p>
+            <table>
+                <tr>
+                    <td>Marcas</td>
+                    <td>Seat</td>
+                    <td>Ford</td>
+                    <td>BMW</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>23900</td>
+                    <td>21500</td>
+                    <td>11500</td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>24600</td>
+                    <td>23500</td>
+                    <td>13400</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+    </body>
+</html>

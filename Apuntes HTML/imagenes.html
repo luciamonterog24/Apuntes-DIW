@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a class="active" href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Imágenes</h2>
+            <p>
+                Las imágenes son un elemento esencial en las páginas web. Hasta la versión 
+                5 de HTML se utilizaba la etiqueta <span>&lt;img&gt;</span> para incluirlas en una página web. 
+                Pero debido a la necesidad de crear páginas web que se adapten a dispositivos 
+                de diferente tamaño se ha incorporado la etiqueta <span>&lt;picture&gt;</span>.
+            </p>
+            <p>
+                Antes de ver cómo incluir imágenes en una página web conviene distinguir los diferentes 
+                tipos de imágenes que existen: mapas de bits, vectoriales y generadas dinámicamente. Las 
+                imágenes más comunes son las de mapa de bits que están formadas por puntos de colores, 
+                por ejemplo una cámara de fotos digital utiliza imágenes de este tipo, los tipos de archivos 
+                más usados son .jpg, y .png; también se utilizan mucho para gráficos y animaciones las de tipo 
+                .gif. Para crear imágenes de mapa de bits puedes utilizar programas como Photoshop y Gimp (gratis)
+            </p>
+            <h3>Etiqueta <span>&lt;img&gt;</span></h3>
+            <p>
+                Con la etiqueta <span>&lt;img&gt;</span> representamos imágenes en una página web. Esta etiqueta 
+                no tiene etiqueta de cierre, se cierra con el carácter >, aunque también se puede cerrar con />. 
+                Para indicar el origen de la imagen se utiliza el atributo <span>src="ruta_imagen"</span>. Por ejemplo:
+            </p>
+            <p>
+                <pre>
+
+                    &lt;img src="imagenes/pajaro.jpg"&gt;
+
+                </pre>
+                Produce la siguiente imagen:
+            </p>
+            <img style="width: 20%;" src="imagenes/pajaro.jpg"/>
+            <p>
+                Este archivo de imagen puede encontrarse en cualquier lugar accesible desde la página web, en el mismo 
+                directorio, en otro directorio, en otro servidor de internet, etc. En cada caso la ruta para acceder 
+                al archivo será distinta, y puede escribirse de forma absoluta o de forma relativa. Una ruta es 
+                absoluta cuando incluye todos los elementos de la ruta, y una ruta es relativa cuando parte del 
+                directorio en el que se encuentra la página web.
+            </p>
+            <p>
+                El atributo <span>srcset</span> permite establecer distintas imágenes en función de la resolución del dispositivo 
+                y del ancho de la pantalla.
+            </p>
+            <p>
+                <pre>
+
+                    &lt;img srcset="img_resol_normal.png 1x, img_resol_alta.png 2x"/&gt;
+                    
+                </pre>
+            </p>
+            <p>
+                Si la resolución de la pantalla es 1x, que equivale a un monitor de ordenador, se mostrará la imagen 
+                <span>img_resol_normal.png</span>, y si la resolución de la pantalla es 2x, que equivale a un dispositivo móvil de 
+                alta resolución, se mostrará la imagen <span>img_resol_alta.png</span>.
+            </p>
+            <p>
+                El atributo <span>alt</span> contiene texto alternativo, que se mostrará en lugar de la imagen cuando no sea posible verla.
+            </p>
+            <p>
+                Por ejemplo, si escribimos el siguiente código con el nombre del directorio erróneo (grafico en lugar de graficos) se 
+                mostrará el texto de atributo alt:
+            </p>
+            <p>
+                <pre>
+
+                    &lt;img src="imagenes/pjaro.jpg" alt="Imagen pájaro"/&gt;
+
+                </pre>
+            </p>
+            <p>
+                Se mostraría:
+            </p>
+            <img src="imagenes/pjaro.jpg" alt="Imagen pájaro" />
+            <br>
+            <p>
+                El atributo <span>title</span>> es un atributo global, es decir que puede usarse en la mayor parte de las etiquetas de HTML. El atributo 
+                title proporciona información descriptiva del elemento en el que está definido. El atributo title se muestra como un <span>tooltip</span> 
+                al colocar el cursor encima del elemento.
+            </p>
+            <p>
+                <pre>
+
+                    &lt;img src="imagenes/arbol.jpg" title="Árbol" /&gt;
+
+                </pre>
+            </p>
+            <p>
+                Podemos probarlo en esta imagen:
+            </p>
+            <img style="width: 20%;" src="imagenes/arbol.jpg" title="Árbol">
+            <br>
+          </div>
+    </body>
+</html>

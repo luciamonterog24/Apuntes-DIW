@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a class="active" href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Selectores</h2>
+            <p> 
+                El selector es el sujeto de la declaración, es decir, sobre quien se aplica la declaración. La declaración 
+                es la definición de la característica que se aplica sobre el selector. Por ejemplo, <span>h1 { text-align: center }</span>
+                nos dice que sobre las etiquetas <span>h1</span> se aplica el texto alineado al centro.
+            <p>
+                Existen varias formas de definir el selector, vamos a verlas a continuación.
+            </p>
+            <h3>Definir selector con etiquetas</h3>
+            <p>
+                Podemos indicar los nombres de las etiquetas separados por comas. La declaración se aplicará a todas las etiquetas que 
+                indiquemos. Por ejemplo, si queremos aplicar el color rojo a todas las etiquetas h4 y p, declaramos el estilo
+            </p>
+            <p>
+                <span>h4, p { color: red } </span>
+            </p>
+            <p>Mostraría este resultado:</p>
+            <div style="background-color: white; border-style: groove; border-color: #cbbcb1;">
+                <h2>Cabecera h2</h2>
+                <h3>Cabecera h3</h3>
+                <h4 style="color: red;">Cabecera h4</h4>
+                <p style="color: red;">Párrafo uno</p>
+                <p style="color: red;">Párrafo dos</p>
+            </div>
+            <h3>Definir selector con id</h3>
+            <p>
+                Al definir un selector con un identificador mediante #identificador, la declaración del estilo se aplicará 
+                a la etiqueta que contenga el identificador, declarado como id="identificador". Sólo debe haber una etiqueta 
+                con ese identificador en la página. Por ejemplo:
+            </p>
+            <p>
+                <span>#iden { color: blue } </span>
+            </p>
+            <p>Mostraría este resultado:</p>
+            <div style="background-color: white; border-style: groove; border-color: #cbbcb1;">
+                <h2>Cabecera h2</h2>
+                <h3 style="color: blue;">Cabecera h3 con id</h3>
+                <h4>Cabecera h4</h4>
+                <p>Párrafo uno</p>
+                <p>Párrafo dos</p>
+            </div>
+            <h3>Definir selector con clases</h3>
+            <p>
+                Al definir un selector con una clase, la declaración del estilo se aplicará a todas las etiquetas afectadas por la clase. Se define el selector colocando un punto delante del nombre de la clase. Al contrario que con el caso anterior, varias etiquetas pueden tener la misma clase. Podemos aplicar la clase a una etiqueta concreta escribiendo p.clase, con lo cual se aplicará el estilo a las etiqueta p que contengan la clase especificada. Un ejemplo:
+            </p>
+            <p>
+                <span>.clase1 { color: blue } 
+                    p.clase1 { font-style: italic }</span>
+            </p>
+            <p>Mostraría este resultado:</p>
+            <div style="background-color: white; border-style: groove; border-color: #cbbcb1;">
+                <h2>Cabecera h2</h2>
+                <h3 style="color: blue; font-style: italic">Cabecera h3 clase1</h3>
+                <h4>Cabecera h4</h4>
+                <p style="color: blue; font-style: italic">Párrafo uno clase1</p>
+                <p>Párrafo dos</p>
+            </div>
+            <br>
+          </div>
+    </body>
+</html>

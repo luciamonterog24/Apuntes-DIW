@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a class="active" href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Modelo de cajas y Layout</h2>
+            <h3>Elementos inline y block</h3>
+            <p>
+                <span>Los elementos en línea son:</span>
+                <br>
+                <pre>
+
+    a, span, label, strong, br, input, textarea, abbr, 
+    acronym, b, basefont, bdo, big, cite, code, dfn, 
+    em, font, i, kbd, q, s, samp, select, small, strike, 
+    sub, sup, u, u, var
+
+                </pre>
+            </p>
+            <p>Algunas características son:</p>
+            <ol style="list-style-type: disc;">
+                <li>
+                    <span>Son apilables.</span> No tienen ni margin-top ni margin-bottom 
+                    (por mucho que se lo indiques en el CSS). Si tienen 
+                    margin-left y margin-right.
+                </li>
+                <li>
+                    <span>No respetan ni width ni height.</span> Estas medidas dependerán del tamaño 
+                    en píxels de su contenido.
+                </li>
+            </ol>
+            <p>
+                La forma más fácil de saber si un elemento es en línea o no es darle ancho.
+            </p>
+            <p>
+                Si le das width:100% y ves que la caja no ocupa todo el ancho disponible entonces se trata de un 
+                elemento en línea.
+            </p>
+            <p>
+                <span>Los elementos bloque son:</span>
+                <pre>
+
+    div, p, h1, h2, h3, h4, h5, h6, hr, ol, ul, table, li, 
+    address, blockquote, center, dir, dl, fieldset, formisindex, 
+    noframes, noscript, pre, dd, dt, frameset, tbody, td, tfoot, 
+    th, thead, tr
+    
+                </pre>
+            </p>
+            <p>
+                Sus principales características son:
+            </p>
+            <ol style="list-style-type: disc;">
+                <li>
+                    Fuerzan un salto de línea (ocupan todo el ancho disponible).
+                </li>
+                <li>
+                    Respetan el width, el height, el margin-top y el margin-bottom indicados por el usuario.
+                </li>
+            </ol>
+            <p>
+                El mejor modo de ver si un elemento es en bloque o no es escribir varios seguidos y comprobar 
+                si se fuerza el salto de línea o no.
+            </p>
+            <p>
+                Si los elementos quedan uno al lado del otro entonces pueden ser de tipo inline-block o en línea.
+            </p>
+            <h3>Modelo de cajas</h3>
+            <p> 
+                Los elementos de HTML están contenidos en cajas rectangulares. La etiqueta body es la caja principal 
+                dentro de la cual se van colocando las cajas de las etiquetas que se van creando, las cajas pueden 
+                estar unas dentro de otras, o unas al lado de otras, incluso se pueden superponer. Podemos pensar 
+                en el modelo de caja como un borde rectangular (border) que rodea al contenido, hay un margen interior 
+                que define la propiedad padding y un margen exterior que define la propiedad margin. Todo esto es lo 
+                que se conoce como modelo de cajas de CSS (box model) y es fundamental entenderlo bien para poder 
+                diseñar páginas web con soltura.
+            </p>
+            <img src="imagenes/modelo_cajas1.svg" width="600px">
+            <ol style="list-style-type: lower-alpha">
+                <li><span>Contenido.</span> En cada caso este contenido es de un tipo, puede ser un texto, una imagen, 
+                    una lista, otra caja, ... El contenido depende de cada etiqueta, por ejemplo, la etiqueta div admite 
+                    varios tipos de contenido (texto, imágenes, otras etiquetas, ...) mientras que una etiqueta img sólo 
+                    admite una imagen como contenido. En nuestro esquema el contenido está representado por el rectángulo 
+                    gris.</li>
+                <li><span>Padding (margen interior).</span> Espacio transparente entre el contenido y el borde. Puede 
+                    ser de grosor cero. También podemos decir que el padding es el margen interior de la caja. En nuestro 
+                    esquema el padding está representado por las dobles flechas azules.</li>
+                <li><span>Border (borde).</span> Línea que rodea el padding, y por lo tanto también al contenido. Puede 
+                    ser de grosor cero y por lo tanto invisible. En nuestro esquema el borde está representado por la 
+                    línea punteada roja.</li>
+                <li><span>Margin (margen exterior).</span> Espacio transparente rectangular que rodea al borde y sirve 
+                    de separación con otros elementos adyacentes. Puede ser de grosor cero. En nuestro esquema el margin 
+                    está representado por las doble flechas verdes.</li>
+                <li><span>Background-image (Imagen de fondo).</span> Algunos elementos como los contendores div y los 
+                    párrafos p pueden tener una imagen de fondo que se coloca por detrás del contenido, hasta el borde. 
+                    En nuestro esquema no hay imagen de fondo. Más adelante veremos un esquema que sí la tiene.</li>
+                <li><span>Background-color (Color de fondo).</span> Si se define un color de fondo, este se coloca 
+                    por detrás de la imagen de fondo, hasta el borde. En nuestro esquema no hay color de fondo.</li>
+            </ol>
+            <br>
+          </div>
+    </body>
+</html>

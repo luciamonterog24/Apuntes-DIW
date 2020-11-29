@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a class="active" href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Variables CSS</h2>
+            <p>
+                Las variables CSS son entidades definidas por autores CSS que contienen valores específicos que se 
+                pueden volver a utilizar en un documento. Se establecen mediante la notación de propiedades personalizadas 
+                (por ejemplo, <span>--main-color: black;</span>) y se accede mediante la función <span>var()</span> (por 
+                ejemplo, color: <span>var (--main-color);</span>).
+            </p>
+            <p>
+                Declaración de una variable:
+            </p>
+            <pre>
+
+                elemento {
+                    --main-bg-color: brown;
+                  }
+
+            </pre>
+            <p>
+                Uso de la variable:
+            </p>
+            <pre>
+
+                elemento {
+                    background-color: var(--main-bg-color);
+                  }
+                  
+            </pre>
+        </div>
+    </body>
+</html>

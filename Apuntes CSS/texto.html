@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a class="active" href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Textos, tipografías y tamaños</h2>
+            <p>
+                El texto es fundamental en el diseño de una página web. La fuente o tipo de letra 
+                o tipografía es la forma de dibujar los caracteres de un alfabeto. Existen multitud 
+                de fuentes para cada alfabeto o sistema de escritura, no hay un método universal 
+                de denominación y clasificación de las fuentes. CSS proporciona uns sistema para 
+                seleccionar y usar fuentes basado en las "familias de fuentes".
+            </p>
+            <h3>font-family</h3>
+            <p>
+                La propiedad font-family indica la fuente a emplear. La fuente se indica como una 
+                lista de valores separados por comas. El navegador intentará utilizar la primera 
+                fuente y si no es posible, intentará con las siguientes. Se puede dar un valor de 
+                fuente de dos formas: Familia de fuentes y fuentes genéricas.
+            </p>
+            - <span>Familia de fuentes</span>, se indica el nombre concreto de la fuente, como "Times New Roman", 
+            Arial, Verdana, etc. Si el nombre tiene espacios, irá entre comillas.<br>
+            - <span>Fuente genérica</span> se indica un conjunto de fuentes similares, por ejemplo, sans-serif, es 
+            un grupo de fuentes sin "remates", pertenecen a este tipo Arial, Verdana, Helvetica, ...
+            <h3>Fuentes web</h3>
+            <p>
+                Como hemos dicho las fuentes deben estar disponibles en el momento de utilizarlas. 
+                En el dispositivo que utilicemos (ordenador, tablet, móvil, etc.) ya están instaladas 
+                las fuentes más comunes. Si en nuestra página utilizamos una fuente nueva o poco común 
+                debemos asegurarnos que esté disponible para todos los usuarios que visiten la página. 
+                Podemos lograrlo de dos formas, utilizando unas fuentes web o instalando la fuente en 
+                nuestro servidor web.
+            </p>
+            <p>
+                Para ello debemos visitar la web <a href="https://fonts.google.com/">https://fonts.google.com/</a> y 
+                seguir las instrucciones. Básicamente se trata de elegir una fuente de las disponibles y seguir 
+                unos de estos dos métodos:
+            </p>
+            <p>
+                La forma más usual de hacerlo es utilizando las fuentes web de Google.
+            </p>
+            <p>
+                - Colocar un enlace a la web de Google indicando la fuente elegida, se hace desde la cabecera de 
+                la página HTML.
+            </p>
+            <pre>
+
+                &lt;link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"&gt;
+                
+            </pre>
+            <p>
+                - Importar la fuente en nuestra hoja de estilos desde la web de Google.
+            </p>
+            <pre>
+
+                &lt;style&gt; @import url('https://fonts.googleapis.com/css?family=Aldrich'); &lt;/style&gt;
+                
+            </pre>
+            <h3>font-style</h3>
+            <p>
+                La propiedad <span>font-style</span> permite indicar si la fuente es inclinada. Puede tener 
+                tres valores:
+            </p>
+            <ol style="list-style-type: disc;">
+                <li><span>normal</span>, no inclinada. Es el valor por defecto.</li>
+                <li><span>oblique</span>, la forma de la letra no cambia, simplemente se inclina.</li>
+                <li><span>italic</span>, además de inclinarse, la forma de algunas letras cambia</li>
+            </ol>
+            <h3>font-size</h3>
+            <p>
+                La propiedad font-size establece el tamaño de la fuente. El valor se puede indicar 
+                en varias unidades de medida, unidades absolutas (px, mm, ...) unidades relativas 
+                (em, %, ...) o con valores predeterminados  (xx-small, x-small, small, medium, large, 
+                x-large y xx-large). 
+            </p>
+            <h3>font-weight</h3>
+            <p>
+                La propiedad font-weight establece el grosor de la fuente. El valor se puede indicar 
+                con valores predeterminados  (normal, bold, lighter y bolder) y con estos 9 números: 
+                100, 200, 300, 400, 500, 600, 700, 800, 900.
+            </p>
+            <h3>text-align</h3>
+            <p>
+                La propiedad text-align define la alineación horizontal de un texto. Se pueden aplicar 
+                los siguientes valores:
+            </p>
+            <ol style="list-style-type: disc;">
+                <li><span>left</span>, texto alineado a la izquierda.</li>
+                <li><span>right</span>, texto alineado a la derecha.</li>
+                <li><span>center</span>, texto alineado al centro de su contenedor, dejando igual 
+                    espacio a la derecha que a la izquierda en cada línea.</li>
+                <li><span>justify</span>, texto justificado, es decir, el texto se alinea a la derecha y a la 
+                    izquierda en cada línea, para ello se introducen espacios en blanco entre las 
+                    palabras.</li>
+                <pre>
+
+                text-align: justify;
+            
+                </pre>
+            </ol>
+            <h3>text-shadow</h3>
+            <p>
+                La propiedad text-shadow agrega sombra al texto. Acepta una lista de sombras separadas 
+                por coma, para aplicarlas al texto y a la propiedad text-decorations del elemento.
+            </p>
+        </div>
+    </body>
+</html>

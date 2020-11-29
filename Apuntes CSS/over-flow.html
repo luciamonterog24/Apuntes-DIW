@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a class="active" href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Overflow</h2>
+            <p>
+                La propiedad CSS overflow  especifica: si recortar contenido, dibujar 
+                barras de desplazamiento o mostrar el contenido excedente en un elemento 
+                a nivel de bloque.
+            </p>
+            <p>
+                Usando la propiedad <span>overflow</span> con un valor distinto a <span>visible</span>, valor por 
+                defecto, creará un nuevo contexto de formatos de bloques. Esto es 
+                técnicamente necesario debido a que si un elemento flotante interceptara 
+                con otros forzaría a reajustar el contenido alrededor de los elementos 
+                que se interceden. El reajuste sucedería luego de cada desplazamiento, 
+                y llevaría a un desplazamiento demasiado lento.
+            </p>
+            <p>Sintáxis</p>
+            <ol style="list-style-type:disc;">
+                <li><span>overflow: visible</span>: Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.</li>
+                <li><span>overflow: hidden</span>: El contenido es recortado y no se muestran barras de posición.</li>
+                <li><span>overflow: scroll</span>: se proveen barras de desplazamiento</li>
+                <li><span>overflow: auto</span>: Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.</li>
+                <li><span>overflow: inherit</span></li>
+            </ol>
+            <p>Ejemplos</p>
+            <pre>
+
+                p {  
+                    width: 12em;
+                    border: dotted;
+                    overflow: visible;   /* dibuja barras si es necesario */ 
+               }
+
+            </pre>
+            <p style="width: 12em; border: dotted; overflow: visible;">Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Illo officia veniam 
+                dolore maiores fuga esse quo maxime sapiente, tempore nihil eos 
+                animi dolores laboriosam! Molestiae accusantium eos mollitia quia 
+                distinctio.</p>
+            <pre>
+
+                p { 
+                    overflow: hidden; /* no se dibujan barras */ 
+                }
+
+            </pre>
+            <p style="width: 12em; border: dotted; overflow: hidden;">Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Illo officia veniam 
+                dolore maiores fuga esse quo maxime sapiente, tempore nihil eos 
+                animi dolores laboriosam! Molestiae accusantium eos mollitia quia 
+                distinctio.</p>
+            <pre>
+
+                p { 
+                    overflow: scroll; /* se dibujan ambas barras */
+                }
+    
+            </pre>
+            <p style="width: 12em; border: dotted; overflow: scroll;">Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Illo officia veniam 
+                dolore maiores fuga esse quo maxime sapiente, tempore nihil eos 
+                animi dolores laboriosam! Molestiae accusantium eos mollitia quia 
+                distinctio.</p>
+            <pre>
+
+                p { 
+                    overflow: auto; /* se dibujan barras según se necesite */
+                }
+        
+            </pre>
+            <p style="width: 12em; border: dotted; overflow: auto;">Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Illo officia veniam 
+                dolore maiores fuga esse quo maxime sapiente, tempore nihil eos 
+                animi dolores laboriosam! Molestiae accusantium eos mollitia quia 
+                distinctio.</p>
+            <br>
+          </div>
+    </body>
+</html>

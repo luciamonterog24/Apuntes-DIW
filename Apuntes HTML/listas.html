@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a class="active" href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Listas</h2>
+            <h3>Listas desordenadas</h3>
+            <p>
+                La etiqueta <span>&lt;ul&gt;</span> (unorderer list) define una lista 
+                desordenada. Entre la etiqueta de apertura y la de cierre se incluyen 
+                los elementos de la lista con la etiqueta <span>&lt;li&gt;</span>.
+            </p>
+            <p>
+                <pre>
+
+                    &lt;ul&gt; 
+                        &lt;li&gt;Plátanos&lt;/li&gt; 
+                        &lt;li&gt;Naranjas&lt;/li&gt; 
+                        &lt;li&gt;Manzanas&lt;/li&gt; 
+                    &lt;/ul&gt;
+                    
+                </pre>
+            </p>
+            <p>Mostrará este resultado:</p>
+            <p>
+                •&nbsp &nbsp Plátanos <br>
+                •&nbsp &nbsp Naranjas <br>
+                •&nbsp &nbsp Manzanas <br>
+            </p>
+            <h4>Estilo</h4>
+            <p>
+                Por defecto, delante de cada elemento se pone un disco o punto negro. Podemos cambiar este marcador (o viñeta) 
+                modificando el atributo list-style-type con hojas de estilo.<br>
+                Para listas desordenadas, los valores más usuales son:<br>
+                &nbsp &nbsp &nbspnone: No muestra ningún marcador.<br>
+                •&nbsp &nbspdisc: Muestra un punto negro. Es el valor por defecto.<br>
+                ∘&nbsp &nbspcircle: Un círculo vacío.<br>
+                ▪&nbsp &nbspsquare: Un cuadrado.
+            </p>
+            <p>
+                Por ejemplo, si aplicamos este estilo <span>ul { list-style-type: square }</span> a la lista anterior, 
+                obtendremos este resultado:<br><br>
+                ▪&nbsp &nbsp Plátanos<br>
+                ▪&nbsp &nbsp Naranjas<br>
+                ▪&nbsp &nbsp Manzanas<br>
+            </p>
+            <h3>Listas ordenadas</h3>
+            <p>
+                La etiqueta <span>&lt;ol&gt;</span> (orderer list) define una lista ordenada. Entre la etiqueta de 
+                apertura y la de cierre se incluyen los elementos de la lista con la etiqueta <span>&lt;li&gt;</span>. 
+                En una lista ordenada los marcadores se ordenan automáticamente según el tipo de ordenación (numérica o 
+                alfabética) asociado al atributo list-style-type, si no se especifica se ordenan numéricamente.
+            </p>
+            <p>
+                <pre>
+
+                    &lt;ol&gt; 
+                        &lt;li&gt;Abrir&lt;/li&gt; 
+                        &lt;li&gt;Editar&lt;/li&gt; 
+                        &lt;li&gt;Guardar&lt;/li&gt; 
+                        &lt;li&gt;Cerrar&lt;/li&gt; 
+                    &lt;/ol&gt;
+
+                </pre>
+                <br><br>Mostrará este resultado:<br>
+                <ol> 
+                    <li>Abrir</li>
+                    <li>Editar</li>
+                    <li>Guardar</li>
+                    <li>Cerrar</li> 
+                </ol>
+            </p>
+            <h4>Estilo</h4>
+            <p>
+                Por defecto, delante de cada elemento se pone un número. De forma similar que para las listas 
+                no ordenadas, podemos cambiar este marcador modificando el atributo list-style-type.
+            </p>
+            <p>
+                Para listas ordenadas, los valores más utilizados son:
+                <ol style="list-style-type: none">
+                    <li>none: No muestra ningún marcador.</li>
+                    <li>decimal: Números decimales: 1, 2, 3... 10, 11...</li>
+                    <li>decimal-leading-zero: Números decimales con zeros delante: 01, 02, 03... 10, 11...</li>
+                    <li>lower-roman: Números romanos en minúsculas: i, ii, iii, iv, v...</li>
+                    <li>upper-roman: Númeors romanos en mayúsculas: I, II, III, IV, V...</li>
+                    <li>lower-alpha: Letras en minúscula: a, b, c, d...</li>
+                    <li>upper-alpha: Letras en mayúscula: A, B, C, D...</li>
+                </ol>
+            </p>
+            <p>
+                Por ejemplo, si aplicamos este estilo <span>ol { list-style-type: lower-alpha }</span> a la lista 
+                anterior, obtendremos este resultado:
+            </p>
+            <ol style="list-style-type: lower-alpha;"> 
+                <li>Abrir</li>
+                <li>Editar</li>
+                <li>Guardar</li>
+                <li>Cerrar</li> 
+            </ol>
+            <br>
+        </div>
+    </body>
+</html>

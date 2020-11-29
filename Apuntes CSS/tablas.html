@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a class="active" href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Tablas</h2>
+            <p>
+                El estándar CSS 2.1 define dos modelos diferentes para el tratamiento 
+                de los bordes de las celdas. La propiedad que permite seleccionar el 
+                modelo de bordes es <span>border-collapse</span>:
+            </p>
+            <p>
+                El modelo <span>collapse</span> funciona de forma automática los bordes de las celdas 
+                adyacentes, mientras que el modelo <span>separate</span> fuerza a que cada celda 
+                muestre sus cuatro bordes. Por defecto, los navegadores utilizan el 
+                modelo <span>separate</span>.
+            </p>
+            <p>Ejemplo:</p>
+            <pre>
+
+                .tabla1 {
+                    width: 250px;
+                    border: 1px solid #000;
+                    border-collapse: collapse;
+                  }
+
+            </pre>
+            <p>Mostraría:</p>
+            <table style="width: 250px; border: 1px solid #000; border-collapse: collapse;">
+                <tr style="width: 250px; border: 1px solid #000; border-collapse: collapse;">
+                    <td>Marcas</td>
+                    <td>Seat</td>
+                    <td>Ford</td>
+                    <td>BMW</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>23900</td>
+                    <td>21500</td>
+                    <td>11500</td>
+                </tr>
+                <tr style="width: 250px; border: 1px solid #000; border-collapse: collapse;">
+                    <td>2017</td>
+                    <td>24600</td>
+                    <td>23500</td>
+                    <td>13400</td>
+                </tr>
+            </table>
+            <p>
+                Si se opta por el modelo separate (que es el que se aplica si no se indica lo 
+                contrario) se puede utilizar la propiedad border-spacing para controlar la 
+                separación entre los bordes de cada celda.
+            </p>
+            <p>
+                Si solamente se indica como valor una medida, se asigna ese valor como 
+                separación horizontal y vertical. Si se indican dos medidas, la primera 
+                es la separación horizontal y la segunda es la separación vertical entre celdas.
+            </p>
+            <p>
+                La propiedad <span>border-spacing</span> sólo controla la separación entre celdas y por tanto, 
+                no se puede utilizar para modificar el tipo de modelo de bordes que se utiliza. 
+                En concreto, si se establece un valor igual a 0 para la separación entre los 
+                bordes de las celdas, el resultado es muy diferente al modelo collapse.
+            </p>
+            <p>
+                El resultado es que <span>border-spacing: 0</span> muestra los bordes con una anchura doble, 
+                ya que en realidad se trata de dos bordes iguales sin separación entre ellos. 
+                Por tanto, las diferencias visuales con el modelo border-collapse: collapse 
+                son muy evidentes.
+            </p>
+        </div>
+    </body>
+</html>

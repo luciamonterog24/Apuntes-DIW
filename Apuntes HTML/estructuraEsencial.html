@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a class="active" href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Estructura esencial de un fichero HTML</h2>
+            <p>
+                Al hablar de la estructura de una página web <span>html</span> podemos distinguir dos partes principales, 
+                la cabecera <span>head</span> y el cuerpo <span>body</span>. La cabecera contiene información importante 
+                para la propia página pero que el usuario no ve directamente (salvo el título), y en el cuerpo está el 
+                contenido visible de la página.
+            </p>
+            <img style="width: 20%;" src="imagenes/estructuraEsencial.PNG">
+            <p>Podemos conseguir esta estructura en Visual Studio Code escribiendo <span>!</span> y pulsando <span>Enter</span></p>
+            <div>
+                Vamos a ver las zonas más importantes que hay dentro de ambas partes, para ello utilizaremos el siguiente esquema:
+                <img style="width: 25%;" src="imagenes/estructura_pagina_web.png" />
+            </div>
+            <p>
+                En la cabecera tenemos etiquetas para definir los metadatos <span>meta</span> como el juego de caracteres 
+                (charset) y el viewport, a continuación el título <span>tittle</span> y enlaces a archivos de hojas de estilo 
+                <span>link</span> y Javascript <span>script</span>. Algunas de estas etiquetas son obligatorias y otras opcionales, 
+                pero con reglas en cuanto a donde deben colocarse. Englobando la cabecera y el cuerpo tenemos la etiqueta <span>html</span>. 
+                Para definir el tipo de documento se utiliza la declaración <span>!DOCTYPE</span>.
+            </p>
+            <p>
+                Dentro del cuerpo <span>body</span> tenemos todo el contenido de la página web, por lo tanto podemos incluir en 
+                él prácticamente todas las etiquetas de HTML, sin ninguna regla en cuanto al orden de las etiquetas, sin embargo, es 
+                conveniente dar una estructura lógica a la página mediante el uso adecuado de las etiquetas semánticas. Este tipo de 
+                etiquetas permiten definir cabeceras <span>header</span>, cuerpo principal <span>main</span>, secciones <span>section</span>, 
+                artículos <span>article</span>, contenido adicional <span>aside</span> y pie <span>footer</span>. Dentro de cada una de 
+                estas partes podemos colocar las etiquetas que incorporan el contenido, párrafos <span>p</span>, cabeceras (h1,h2,...), 
+                listas, tablas, imágenes, vídeos, ... Si necesitamos hacer algún tipo de agrupación de etiquetas que no está contemplado 
+                por las etiquetas semánticas disponemos de la etiqueta <span>div</span> que crea un contenedor sin significado semántico.
+            </p>
+            <br>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a class="active" href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Formularios</h2>
+            <p>
+                Un formulario es un elemento que permite <span>recoger datos introducidos por el usuario</span>. 
+                Los datos serán procesados por el programa que indiquemos. Los formularios se utilizan 
+                para obtener distintos tipos de información, por ejemplo, los datos de una compra, 
+                inscribirse en páginas, dar opiniones en sitios web, etc.
+            </p>
+            <h3>La etiqueta &lt;form&gt;&lt;/form&gt;</h3>
+            <p>
+                Aunque un formulario utiliza la etiqueta form como parte central, necesita de otras etiquetas 
+                para poder funcionar, normalmente incluye las etiquetas input y label, y opcionalmente otras más. 
+                Es decir, un formulario es un componente de una página web que está formado por varios elementos, 
+                como campos de texto, casillas de verificación, opciones desplegables, botones y otras etiquetas 
+                para darle formato.
+            </p>
+            <p>Ejemplo:</p>
+            <pre>
+
+        &lt;form&gt;
+            &lt;p&gt;Introduce la petición&lt;input type="text" name="mensaje"&gt; &lt;input type="submit" value="Enviar"&gt;&lt;/p&gt;
+        &lt;/form&gt;
+
+            </pre>
+            <br>
+            <p>
+                Muestra esto:
+            </p>
+            <form action="#" method="post" >
+                <p>Introduce la petición: <input type="text" name="mensaje"> <input type="submit" value="Enviar"></p>
+            </form>
+            <p>
+                El formulario empieza con la etiqueta &lt;form&gt; y acaba con la etiqueta &lt;/form&gt;. Entre estas dos 
+                etiquetas podemos escribir las etiquetas que queramos para declarar los <span>campos</span> de entrada o controles del 
+                formulario mediante la etiqueta &lt;input&gt;, también podemos escribir etiquetas de html para describir cada 
+                campo del formulario, en este caso hemos utilizado etiquetas <p> aunque es más apropiado utilizar etiquetas 
+                label, como veremos más adelante.
+            </p>
+            <p>
+                Dentro de la etiqueta &lt;form&gt; ponemos los atributos que necesitemos, normalmente el atributo <span>action</span> para
+                 indicar el archivo que tratará los datos y el atributo <span>method</span> con el método para enviar los datos.
+            </p>
+            <p>
+                También hay que poner un <span>botón</span> para enviar el formulario.
+            </p>
+            <h3>Atributos</h3>
+            <ol style="list-style-type: circle">
+                <li>
+                    El atributo <span>action</span> indica una URL (dirección) a la que enviar los datos del formulario. Esta URL debe ser un elemento capaz
+                     de recibir los datos del formulario y procesarlos.    
+                </li>
+                <li>
+                    El atributo <span>method</span> indica el método mediante el que se transfieren las variables del formulario. Su valor puede ser <span>get</span> o <span>post</span>. El 
+                    método es una característica del protocolo HTTP y afecta a la forma de comunicación, no al contenido de los datos.
+                </li>
+                <li>
+                    El atributo <span>autocomplete</span> admite dos valores, on y off. Si escribimos autocomptete="on", el navegador intentará mostrar sugerencias al 
+                    usuario para rellenar los datos según lo introducido previamente en otros formularios.
+                </li>
+                <li>
+                    El atributo <span>novalidate</span>, si aparece, indica que no se realicen las validaciones indicadas a nivel de los campos 
+                    del formulario. Por ejemplo, si hemos indicado que un campo es numérico y en la etiqueta form especificamos 
+                    novalidate, se permitirán datos no numéricos es ese campo
+                </li>
+                <li>
+                    El atributo <span>enctype</span> indica el modo en que será cifrada la información para su envío. Por defecto tiene el valor 
+                    application/x-www-form-urlencoded.
+                </li>
+            </ol>
+            <h4>Etiqueta &lt;input&gt; de un formulario</h4>
+            <p>
+                La etiqueta <span>input</span> es la encargada de crear los campos de entrada del formulario. Aunque la etiqueta 
+                input también se puede utilizar sin estar ligada a un formulario. Existen bastantes tipos de datos para el elemento 
+                input, por ejemplo, texto, casilla de verificación, área de texto, fecha, etc., para cada uno de ellos el navegador 
+                web crea un campo con el formato adecuado de forma automática. El atributo type define el tipo del elemento input.
+            </p>
+            <ol style="list-style-type: circle">
+                <li>
+                    <span>text</span>. Define un campo de texto, es el atributo más usado y se usa para introducir una línea de texto. 
+                    Se puede introducir cualquier carácter, letras, números, etc. Los navegadores lo presentan como una caja de texto 
+                    de una longitud de 20 caracteres. Esta longitud se puede variar con el atributo size, este valor se refiere a la 
+                    longitud de visualización de la caja, pero el usuario puede introducir más caracteres; si queremos controlar esa 
+                    cantidad podemos utilizar los atributos maxlength y minlength que indican el máximo y el mínimo de caracteres que 
+                    puede introducir el usuario.
+                </li>
+                <li>
+                    Otro atributo muy utilizado es <span>value</span> que permite establecer un valor por defecto. Por ejemplo, en el 
+                    campo localidad hemos escrito value="Valencia" de forma que el texto Valencia aparecerá cuando se carge el formulario, 
+                    el usuario podrá dejar este valor o modificarlo.
+                </li>
+                <li>
+                    El atributo <span>required</span> hace que sea obligatorio rellenar ese campo, es decir, no se puede dejar en blanco.
+                </li>
+                <li>
+                    También podemos limitar los valores que permitimos mediante una lista desplegable, para ello debemos utilizar el 
+                    atributo list con un nombre de lista, luego debemos crear la lista con la etiqueta datalist, y crear los valores 
+                    de la lista con la etiqueta option, tal y como muestra el siguiente código:
+                    <pre>
+
+        &lt;p&gt;Elegir memoria USB:&lt;input  list="listaUsb"&gt;&lt;/p&gt;
+        &lt;datalist id="listaUsb" &gt;
+            &lt;option value="8" &gt;
+            &lt;option value="16" &gt;
+            &lt;option value="32" &gt;
+            &lt;option value="64" &gt;
+        &lt;/datalist&gt;
+
+                    </pre>
+                    <p>Elegir memoria USB:<input  list="listaUsb"></p>
+                    <datalist id="listaUsb" >
+                        <option value="8" >
+                        <option value="16" >
+                        <option value="32" >
+                        <option value="64" >
+                    </datalist>
+                </li>
+                <li>
+                    <span>checkbox</span>. Define una casilla de verificación que puede tomar dos valores: marcada o 
+                    desmarcada. Por esto se utiliza para datos que pueden tomar dos valores, si/no, de acuerdo/en 
+                    desacuerdo, activado/desactivado.
+                    <pre>
+
+        &lt;input type="checkbox" value"acepta" name="condiciones" checked="checked"&gt; Acepto condiciones&lt;/p&gt;
+                    
+                    </pre>
+                    <input type="checkbox" value"acepta" name="condiciones" checked="checked"> Acepto condiciones</p>
+                </li>
+                <li>
+                    <span>radio</span>. Con este tipo de entrada se define una opción a elegir. Normalmente se presentan 
+                    varias opciones sobre una cuestión para que el usuario elija sólo una de ellas. Por ejemplo, sexo: 
+                    hombre o mujer; tipo domicilio: calle, plaza, avenida; Transporte: avión, tren, autobús.
+                    <pre>
+
+        &lt;p&gt;Sexo: Hombre&lt;input type="radio" name="sexo" value="h"&gt; Mujer&lt;input type="radio" name="sexo" value="m"&gt;&lt;/p&gt;
+                    
+                    </pre>
+                    <p>Sexo: Hombre<input type="radio" name="sexo" value="h"> Mujer<input type="radio" name="sexo" value="m"></p>
+                </li>
+                <li>
+                    <span>number</span>. Sirve para introducir números. Por defecto sólo permite introducir números 
+                    enteros (números sin decimales, positivos y negativos) pero con el atributo step podemos permitir 
+                    los decimales que queramos, por ejemplo con step=0.1 permitimos un decimal, con step=0.01 dos decimales.
+                    <pre>
+
+        &lt;p&gt;Cantidad: &lt;input type="number" name="numero" step="0.1"&gt;&lt;/p&gt;
+
+                    </pre>
+                    <p>Cantidad: <input type="number" name="numero" step="0.1"/p>
+                </li>
+                <li>
+                    <span>range</span>. Sirve para introducir números entre un rango mediante un deslizador. Por defecto el 
+                    rango va de 0 a 100, con incrementos de uno en uno, pero podemos cambiar estos valores con los atributos 
+                    min, max y step.
+                    <pre>
+
+        &lt;p&gt;Volumen(0-100)&lt;input type="range" name="volumen" min="10" max="100" step="5"&gt;&lt;/p&gt;
+
+                    </pre>
+                    <p>Volumen(0-100)<input type="range" name="volumen" min="10" max="100" step="5"></p>
+                </li>
+                <li>
+                    <span>password</span>. Sirve para introducir claves y contraseñas, la diferencia principal respecto 
+                    a un campo de texto es que cuando el usuario está escribiendo no se ven los caracteres para evitar 
+                    que alguien pueda copiarlos.
+                    <pre>
+
+        &lt;p&gt;Contraseña: &lt;input type="password" name="clave" &gt;&lt;/p&gt;
+        
+                    </pre>
+                    <p>Contraseña: <input type="password" name="clave" ></p>
+                </li>
+            </ol>
+            <br>
+        </div>
+    </body>
+</html>

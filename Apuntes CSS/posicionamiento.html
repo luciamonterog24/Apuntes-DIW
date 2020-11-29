@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a class="active" href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Posicionamiento</h2>
+            <p>
+                Los navegadores crean y posicionan de forma automática todas las cajas que forman 
+                cada página HTML. No obstante, CSS permite al diseñador modificar la posición en 
+                la que se muestra cada caja.
+            </p>
+            <p>
+                Utilizando las propiedades que proporciona CSS para alterar la posición de las 
+                cajas es posible realizar efectos muy avanzados y diseñar estructuras de páginas 
+                que de otra forma no serían posibles.
+            </p>
+            <p>
+                El estándar de CSS define cinco modelos diferentes para posicionar una caja:
+            </p>
+            <ol style="list-style-type: disc;">
+                <li>
+                    <span>static:</span> se trata del posicionamiento 
+                    que utilizan los navegadores si no se indica lo contrario.
+                    <p>
+                        Si se utiliza este valor, se ignoran los valores de las propiedades top, 
+                        right, bottom y left.
+                    </p>
+                    <pre>
+
+                div {
+                    position:static;
+                }
+
+                    </pre>
+                </li>
+                <li>
+                    <span>relative:</span> variante del posicionamiento normal que 
+                    consiste en posicionar una caja según el posicionamiento normal y después 
+                    desplazarla respecto de su posición original.
+                    <p>
+                        El desplazamiento de la caja se controla con las propiedades 
+                        top, right, bottom y left.
+                    </p>
+                    <pre>
+
+                div {
+                    position: static;
+                    top: 8em;
+                }
+
+                    </pre>
+                </li>
+                <li>
+                    <span>absolute:</span> la posición de una caja se establece 
+                    de forma absoluta respecto de su elemento contenedor y el resto de elementos 
+                    de la página ignoran la nueva posición del elemento.
+                    <p>
+                        El desplazamiento de la caja también se controla con las 
+                        propiedades top, right, bottom y left, pero su interpretación es mucho 
+                        más compleja, ya que el origen de coordenadas del desplazamiento depende 
+                        del posicionamiento de su elemento contenedor.
+                    </p>
+                    <pre>
+
+                div {
+                    position: absolute;
+                    top:  50px;
+                    left: 50px;
+                }
+
+                    </pre>
+                </li>
+                <li>
+                    <span>fixed:</span> variante del posicionamiento absoluto que convierte 
+                    una caja en un elemento inamovible, de forma que su posición en la pantalla siempre es 
+                    la misma independientemente del resto de elementos e independientemente de si el usuario 
+                    sube o baja la página en la ventana del navegador.
+                    <p>
+                        El desplazamiento se establece de la misma forma que en el posicionamiento 
+                        absoluto, pero en este caso el elemento permanece inamovible en la pantalla.
+                    </p>
+                    <pre>
+
+                div {
+                    position: fixed;
+                    top:  50px;
+                    left: 50px;        
+                }
+        
+                    </pre>
+                </li>
+                <li>
+                    <span>sticky:</span> funciona de manera similar al posicionamiento relativo, en cuanto 
+                    que no elimina ningún elemento del flujo del documento. En otras palabras, un elemento 
+                    "sticky" no afecta a la posición de sus elementos adyacentes, y no hunde su elemento padre.
+                    <pre>
+
+                #sidebar {
+                    position: sticky;
+                    top: 0;
+                }
+            
+                    </pre>
+                </li>
+                <li>
+                    <span>z-index:</span> indica el orden de un elemento posicionado y sus descendientes. 
+                    Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren 
+                    aquellos con menor valor.
+                    <pre>
+
+                #sidebar {
+                    position:relative; 
+                    z-index:1;
+                }
+                    
+                    </pre>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

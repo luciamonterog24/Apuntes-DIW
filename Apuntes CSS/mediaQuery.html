@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes CSS
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes CSS</a></li>
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="selectores.html">Selectores</a></li>
+            <li><a href="plantillaReset.html">Plantilla Reset</a></li>
+            <li><a href="modeloCajas.html">Modelo de cajas y Layout</a></li>
+            <li><a href="posicionamiento.html">Posicionamiento</a></li>
+            <li><a href="pseudoelementosPseudoclases.html">Pseudoelementos y pseudoclases</a></li>
+            <li><a href="variablesCSS.html">Variables CSS</a></li>
+            <li><a href="texto.html">Textos, tipografías y tamaños</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a class="active" href="mediaQuery.html">Media Query</a></li>
+            <li><a href="over-flow.html">Overflow</a></li>
+            <li><a href="flex-box.html">FlexBox</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Media Query</h2>
+            <p>
+                Las media queries (en español "consultas de medios") son útiles cuando deseas 
+                modificar tu página web o aplicación en función del tipo de dispositivo (como 
+                una impresora o una pantalla) o de características y parámetros específicos 
+                (como la resolución de la pantalla o el ancho del viewport del navegador).
+            </p>
+            <p>
+                Se utilizan para:
+            </p>
+            <ol style="list-style-type: disc;">
+                <li>Aplicar estilos condicionales con las reglas-at @media e @import de 
+                    CSS.</li>
+                <li>Indicar medios específicos en los elementos <link>, <source> y otros 
+                    elementos HTML.</li>
+                <li>Testear y monitorizar los estados de los medios usando los métodos 
+                    de javascript Window.matchMedia() y MediaQueryList.addListener().</li>
+            </ol>
+            <p>
+                Las media queries consisten de un tipo de medio opcional y una o más 
+                expresiones de características de medios. Varias consultas se pueden 
+                combinar utilizando operadores lógicos. No distinguen entre mayúsculas 
+                y minúsculas.
+            </p>
+            <p>
+                El resultado de la consulta es "verdadero" cuando el tipo de medio 
+                (si se especifica) coincide con el dispositivo en el que se está 
+                mostrando el documento y todas las expresiones en el media query 
+                son "verdaderas". En este caso, se aplica los estilos correspondientes, 
+                siguiendo las reglas usuales de cascada.
+            </p>
+            <p>
+                Las consultas sobre tipos de medios desconocidos son siempre falsas.
+            </p>
+            <pre>
+
+                &lt;!-- CSS media query on a link element --&gt;
+                &lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;
+
+                &lt;!-- CSS media query within a style sheet --&gt;
+                &lt;style&gt;
+                    @media (max-width: 600px) {
+                        .facet_sidebar {
+                            display: none;
+                        }
+                    }
+                &lt;/style&gt;
+
+            </pre>
+            <br>
+          </div>
+    </body>
+</html>

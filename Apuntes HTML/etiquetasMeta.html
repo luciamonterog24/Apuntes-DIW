@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>
+            Apuntes HTML
+        </title>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active">Apuntes HTML</a></li>
+            <li><a href="index.html">¿Qué es HTML?</a></li>
+            <li><a href="estructuraEsencial.html">Estructura esencial</a></li>
+            <li><a class="active" href="etiquetasMeta.html">Etiquetas meta básicas</a></li>
+            <li><a href="texto.html">Texto</a></li>
+            <li><a href="hiperenlaces.html">Hiperenlaces</a></li>
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="video.html">Video y audio</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+        </ul>
+        <div class="contenido">
+            <h2 class="cabecera">Etiquetas meta básicas</h2>
+            <p>
+                La etiqueta meta sirve para aportar información adicional al navegador a la hora de procesar la página, es 
+                lo que se conoce como metadatos. Esta etiqueta no tiene etiqueta de cierre, se cierra con />. La forma de 
+                la etiqueta es <span>&lt;meta contenido="valor"/&gt;</span>, donde contenido y valor pueden ser cualquier 
+                texto, en principio no hay restricciones estrictas al respecto, podemos crear una pareja contenido/valor 
+                según nuestras necesidades, por ejemplo, al crear un servicio web.
+            </p>
+            <p>
+                Los metadatos no se muestran al usuario pero son analizados por el navegador, los buscadores o servicios web.
+                <br>
+                Algunos de los datos más frecuentes que se suelen especificar son los siguientes:
+            </p>
+            <ol style="list-style-type: circle;">
+                <li><span>&lt;meta charset="utf-8"&gt;</span>, indica el juego de caracteres empleado por la página, se recomienda usar utf-8, anteriormente se usaba ISO-8859-1, para los idiomas occidentales.</li>
+                <br><br>
+                <li><span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>, especifica las características del tamaño de la pantalla para ajustar mejor las paginas con diseño adaptable, sobre todo para dispositivos móviles.</li>
+                <br><br>
+                <li><span>&lt;meta name="author" content="aulaClic"&gt;</span>, indica el autor de la página web.</li>
+                <br><br>
+                <li><span>&lt;meta name="description" content="aulaClic. Cursos de informática gratis" /&gt;</span>, indica la descripción del contenido de la página web.</li>
+                <br><br>
+                <li><span>&lt;meta name="keywords" content="curso base datos ofimática diseño" /&gt;</span>, es una lista de palabras claves relacionadas con el contenido de la página web. Esta información, junto con las dos anteriores es utilizada fundamentalmente por los buscadores.</li>
+                <br><br>
+                <li><span>&lt;meta name="generator" content="Joomla" /&gt;</span>, indica el programa que ha generado la página, la utilizan los generadores de contenido como WordPress, Joomla, etc.</li>
+                <br><br>
+                <li><span>&lt;meta name="robots" content="index, follow" /&gt;</span>, da información para los buscadores acerca del uso de programas robot que indexan las páginas web.</li>
+                <br><br>
+                <li><span>&lt;meta http-equiv="refresh" content="50"&gt;</span>, con http-equiv se proporciona información que va a ser tratada como cabecera por la página web, por ejemplo, para indicar que la página web debe ser cargada de nuevo (refresh) cada 50 segundos, por ejemplo para una página con datos de la bolsa que debe ser actualizada frecuentemente.</li>
+                <br><br>
+                <li><span>&lt;meta http-equiv="refresh" content="10;URL='http://nuevodominio.com/'" /&gt;</span>, indica que al cabo de x sg, se redireccione a la página indicada. Es útil si hemos cambiado la dirección de la página y queremos redirigir al usuario a otra página de forma automática al cabo de unos segundos, para que pueda leer un mensaje de aviso. Si no queremos que lea nada y la redirección sea inmediata, escribiremos un cero en los segundos.</li>
+            </ol>
+            <br><br>
+          </div>
+    </body>
+</html>
